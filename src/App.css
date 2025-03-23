@@ -1,0 +1,235 @@
+/* Estilos generales */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 9em;
+  padding: 4.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.custom-navbar {
+  background-color: #218522;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .navbar-nav .nav-link {
+  color: #ffffffe9;
+}
+
+/* Aumenta el espacio entre los enlaces */
+.nav-link {
+  margin-right: 15px;
+  position: relative;
+}
+
+/* Efecto cuando el cursor pasa por encima de un enlace */
+.nav-link:hover {
+  text-decoration: underline;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.nav-link {
+  margin-right: 20px;
+}
+
+/* Opcional: Si quieres que el último enlace no tenga margen derecho */
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+/* Estilos para el banner */
+.custom-banner {
+  background: linear-gradient(to right, #ffac48, #d38002);
+  color: #fff;
+  height: 10%;
+  width: 100vw; /* Ajustado para ser responsivo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 59px;
+  margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
+}
+
+/* Estilos para el texto en movimiento */
+.moving-text {
+  white-space: nowrap;
+  animation: moveText 40s linear infinite;
+  padding: 0;
+}
+
+/* Animación para mover el texto */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Estilos adicionales para el texto */
+.moving-text h4{
+  margin: 0;
+  font-size: 1.5em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.custom-carousel {
+  height: 77vh;
+  width: 100vw; /* Ajustado para ser responsivo */
+  overflow: hidden;
+  position: relative;
+  margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
+}
+
+.custom-carousel img {
+  object-fit: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.custom-table {
+  display: block;
+  margin-top: 20px;
+  position: relative;
+  height: 77vh;
+  width: 100vw; /* Ajustado para ser responsivo */
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
+}
+
+.custom-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-cell {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.header .custom-cell {
+  font-weight: bold;
+  background-color: #158304c0;
+}
+
+@keyframes borderAnimation {
+  0% { box-shadow: 0 0 10px #ff8c00; }
+  25% { box-shadow: 0 0 15px #ff4500; }
+  50% { box-shadow: 0 0 20px #ffa500; }
+  75% { box-shadow: 0 0 15px #ff6347; }
+  100% { box-shadow: 0 0 10px #ff8c00; }
+}
+
+.animated-border {
+  border-radius: 14px;
+  padding: 10px;
+  animation: borderAnimation 2s infinite alternate;
+}
+
+/* Media Queries para responsividad */
+
+@media (max-width: 768px) {
+  .custom-carousel {
+    height: 50vh;
+  }
+  
+  .custom-table {
+    height: 50vh;
+  }
+  
+  .custom-banner {
+    height: 5vh;
+    margin-top: 40px;
+  }
+  
+  .moving-text h4 {
+    font-size: 1em;
+  }
+  
+  .nav-link {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-carousel {
+    height: 30vh;
+  }
+  
+  .custom-table {
+    height: 30vh;
+  }
+  
+  .custom-banner {
+    height: 3vh;
+    margin-top: 30px;
+  }
+  
+  .moving-text h4 {
+    font-size: 0.8em;
+  }
+  
+  .nav-link {
+    margin-right: 5px;
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 2em;
+  }
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
