@@ -1,3 +1,4 @@
+/* Estilos generales */
 
 #root {
   height: 0; 
@@ -141,7 +142,7 @@
   display: block;
   margin-top: 20px;
   position: relative;
-  height: 77vh;
+  height: 200vh;
   width: 100vw; /* Ajustado para ser responsivo */
   overflow: hidden;
   margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
@@ -208,7 +209,7 @@
   }
   
   .custom-table {
-    height: 30vh;
+    height: 500vh;
   }
   
   .custom-banner {
@@ -233,6 +234,41 @@
 .image-container {
   position: relative;
   display: inline-block;
+}
+
+
+.image-table {
+  width: 80%;  /* Cambia el porcentaje para que la tabla ocupe más espacio, puedes poner un valor mayor si es necesario */
+  margin: auto;
+  border-collapse: collapse;
+  height: 50rem;
+}
+
+.image-table td {
+  padding: 20px; /* Aumenta el espacio entre las imágenes */
+  text-align: center;
+}
+
+.image-table img {
+  width: 100%;  /* Las imágenes ocuparán todo el espacio disponible en la celda */
+  max-width: 300px;  /* Ajusta el tamaño máximo de las imágenes */
+  height: auto;  /* Mantén la proporción de las imágenes */
+  border-radius: 14px;
+  transition: transform 0.2s;
+}
+
+.image-table img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+@media (max-width: 768px) {
+  .image-table {
+    width: 100%;  /* Asegura que la tabla ocupe todo el espacio en pantallas más pequeñas */
+  }
+
+  .image-table img {
+    max-width: 90%;  /* Reduce el tamaño de las imágenes en pantallas pequeñas */
+  }
 }
 
 html, body {

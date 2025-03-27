@@ -2,7 +2,6 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container, Carousel } from 'react-bootstrap';
 import './App.css';
-import Menu from './menu';
 
 function InicioContent() {
   return (
@@ -23,39 +22,32 @@ function InicioContent() {
           <img className="d-block w-100" src="../img/banner3.jpg" alt="Banner 3" />
         </Carousel.Item>
       </Carousel>
-      <div className="custom-table">
+
+      <div className="custom-table" id="menu">
         <div className="custom-row header">
           <div className="custom-cell">
-            <h3><b>PEDIDOS FAVORITOS</b></h3>
+            <h3><b>MENÚ</b></h3>
           </div>
         </div>
+        
         <div className="custom-row row">
           <div className="custom-cell col-md-4">
-            <div className="image-container">
-              <img src="img/pedido1.jpg" className="animated-border" width="100%" alt="Pedido 1" />
-              <div className="overlay">
-                <p className="description">Descripción de la imagen 1</p>
-                <button className="btn-ver-mas">Ver más</button>
-              </div>
-            </div>
-          </div>
-          <div className="custom-cell col-md-4">
-            <div className="image-container">
-              <img src="img/pedido2.jpg" className="animated-border" width="100%" alt="Pedido 2" />
-              <div className="overlay">
-                <p className="description">Descripción de la imagen 2</p>
-                <button className="btn-ver-mas">Ver más</button>
-              </div>
-            </div>
-          </div>
-          <div className="custom-cell col-md-4">
-            <div className="image-container">
-              <img src="img/pedido3.jpg" className="animated-border" width="100%" alt="Pedido 3" />
-              <div className="overlay">
-                <p className="description">Descripción de la imagen 3</p>
-                <button className="btn-ver-mas">Ver más</button>
-              </div>
-            </div>
+            
+          <table className="image-table">
+  <tbody>
+    <tr>
+      <td><img src="img/pedido1.jpg" className="animated-border" alt="Pedido 1" /></td>
+      <td><img src="img/pedido2.jpg" className="animated-border" alt="Pedido 2" /></td>
+      <td><img src="img/pedido3.jpg" className="animated-border" alt="Pedido 3" /></td>
+    </tr>
+    <tr>
+      <td><img src="img/pedidos4.jpg" className="animated-border" alt="Pedido 4" /></td>
+      <td><img src="img/pedidos5.jpg" className="animated-border" alt="Pedido 5" /></td>
+      <td><img src="img/pedidos6.jpeg" className="animated-border" alt="Pedido 6" /></td>
+    </tr>
+  </tbody>
+</table>
+
           </div>
         </div>
       </div>
