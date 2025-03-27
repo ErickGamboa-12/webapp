@@ -2,23 +2,15 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container, Carousel } from 'react-bootstrap';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
-// Importa el componente Menu
-import Menu from './menu'; // Asegúrate de que el archivo menu.jsx existe y está exportando el componente correctamente
-
-// Crea un componente separado para el contenido de inicio
 function InicioContent() {
   return (
     <>
-      {/* Banner principal con gradiente naranja y texto en movimiento */}
       <div className="custom-banner">
         <div className="moving-text">
           <h4>¡Bienvenido a Los Jochos DEL OCHO! Los mejores jochos de la vecindad</h4>
         </div>
       </div>
-
-      {/* Carrusel de imágenes sin texto */}
       <Carousel className="custom-carousel">
         <Carousel.Item>
           <img className="d-block w-100" src="../img/banner.jpg" alt="Banner 1" />
@@ -31,51 +23,31 @@ function InicioContent() {
         </Carousel.Item>
       </Carousel>
 
-      {/* Contenedor de la tabla con divs */}
-      <div className="custom-table">
-        {/* Fila 1 - Encabezado */}
+      <div className="custom-table" id="menu">
         <div className="custom-row header">
           <div className="custom-cell">
-            <h3><b>PEDIDOS FAVORITOS</b></h3>
+            <h3><b>MENÚ</b></h3>
           </div>
         </div>
-
+        
         <div className="custom-row row">
-      <div className="custom-cell col-md-4">
-        <div className="image-container">
-          <img src="img/pedido1.jpg" className="animated-border" width="100%" alt="Pedido 1" />
-          <div className="overlay">
-            <p className="description">Descripción de la imagen 1</p>
-            <button className="btn-ver-mas">Ver más</button>
-          </div>
-        </div>
-      </div>
-      <div className="custom-cell col-md-4">
-        <div className="image-container">
-          <img src="img/pedido2.jpg" className="animated-border" width="100%" alt="Pedido 2" />
-          <div className="overlay">
-            <p className="description">Descripción de la imagen 2</p>
-            <button className="btn-ver-mas">Ver más</button>
-          </div>
-        </div>
-      </div>
-      <div className="custom-cell col-md-4">
-        <div className="image-container">
-          <img src="img/pedido3.jpg" className="animated-border" width="100%" alt="Pedido 3" />
-          <div className="overlay">
-            <p className="description">Descripción de la imagen 3</p>
-            <button className="btn-ver-mas">Ver más</button>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div className="custom-cell col-md-4">
+            
+          <table className="image-table">
+  <tbody>
+    <tr>
+      <td><img src="img/pedido1.jpg" className="animated-border" alt="Pedido 1" /></td>
+      <td><img src="img/pedido2.jpg" className="animated-border" alt="Pedido 2" /></td>
+      <td><img src="img/pedido3.jpg" className="animated-border" alt="Pedido 3" /></td>
+    </tr>
+    <tr>
+      <td><img src="img/pedidos4.jpg" className="animated-border" alt="Pedido 4" /></td>
+      <td><img src="img/pedidos5.jpg" className="animated-border" alt="Pedido 5" /></td>
+      <td><img src="img/pedidos6.jpeg" className="animated-border" alt="Pedido 6" /></td>
+    </tr>
+  </tbody>
+</table>
 
-
-
-        {/* Fila 3 (vacía) */}
-        <div className="custom-column">
-          <div className="custom-cell">
-          Contenido 2
           </div>
         </div>
       </div>
@@ -86,42 +58,71 @@ function InicioContent() {
 function App() {
   const [expanded, setExpanded] = useState(false);
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setExpanded(false);
+  };
+
   return (
-    <Router>
+    <>
       <Navbar expand="md" expanded={expanded} className="p-3 fixed-top custom-navbar">
         <Container>
-          <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-            <img
-              src="../img/logo_jochos.jpg"
-              alt="Logo"
-              width="8%"
-              height="auto"
-              className="me-2"
-            />
+          <Navbar.Brand onClick={() => scrollToSection('inicio')} className="d-flex align-items-center" style={{ cursor: 'pointer' }}>
+            <img src="../img/logo_jochos.jpg" alt="Logo" width="8%" height="auto" className="me-2" />
             <p className="mb-0">Los Jochos DEL OCHO</p>
           </Navbar.Brand>
           <Navbar.Toggle onClick={() => setExpanded(!expanded)} />
           <Navbar.Collapse>
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/" onClick={() => setExpanded(false)} className="ms-4">INICIO</Nav.Link>
-              <Nav.Link as={Link} to="/menu" onClick={() => setExpanded(false)} className="ms-4">MENÚ</Nav.Link>
-              <Nav.Link as={Link} to="/nosotros" onClick={() => setExpanded(false)} className="ms-4">NOSOTROS</Nav.Link>
-              <Nav.Link as={Link} to="/contacto" onClick={() => setExpanded(false)} className="ms-4">CONTACTO</Nav.Link>
-              <Nav.Link as={Link} to="/sucursales" onClick={() => setExpanded(false)} className="ms-4">SUCURSALES</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection('inicio')} className="ms-4">INICIO</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection('menu')} className="ms-4">MENÚ</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection('nosotros')} className="ms-4">NOSOTROS</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection('contacto')} className="ms-4">CONTACTO</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection('sucursales')} className="ms-4">SUCURSALES</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Rutas */}
-      <Routes>
-        <Route path="/" element={<InicioContent />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/nosotros" element={<div>Nosotros</div>} />
-        <Route path="/contacto" element={<div>Contacto</div>} />
-        <Route path="/sucursales" element={<div>Sucursales</div>} />
-      </Routes>
-    </Router>
+      <div id="inicio" className="content-section">
+        <InicioContent />
+      </div>
+      <div id="menu" className="content-section">
+        <Menu />
+      </div>
+      <div id="nosotros" className="content-section">
+        <h2>Nosotros</h2>
+        <p>Información sobre nosotros.</p>
+      </div>
+      <div id="sucursales" className="content-section">
+        <h2>Sucursales</h2>
+        <p>Ubicación de nuestras sucursales.</p>
+      </div>
+      <footer id="contacto" className="contact-banner">
+      <div className="contact-content">
+        <h2 className="title">📞 Contacto</h2>
+        <p className="description">¡Ponte en contacto con nosotros para más información!</p>
+        <ul className="info">
+          <li className="info-item">
+            <img src="../img/Logo_casa.png" width="24px" alt="Dirección" />
+            <span>9na Norte entre 3a y 4a Oriente, Tuxtla Gutiérrez, 29000</span>
+          </li>
+          <li className="info-item">
+            📞 <a href="tel:+529613314349">961 331 4349</a>
+          </li>
+          <li className="info-item">
+            💬 <a href="https://wa.me/5219613314349" target="_blank">+52 1 961 331 4349</a>
+          </li>
+          <li className="info-item">
+            📧 <a href="mailto:sogm_1992@hotmail.com">sogm_1992@hotmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    </>
   );
 }
 
