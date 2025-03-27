@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container, Carousel } from 'react-bootstrap';
 import './App.css';
 
+
+
 function InicioContent() {
   return (
     <>
@@ -41,7 +43,7 @@ function InicioContent() {
       <td><img src="img/pedido3.jpg" className="animated-border" alt="Pedido 3" /></td>
     </tr>
     <tr>
-      <td><img src="img/pedidos4.jpg" className="animated-border" alt="Pedido 4" /></td>
+      <td><img src=" " className="animated-border" alt="Pedido 4" /></td>
       <td><img src="img/pedidos5.jpg" className="animated-border" alt="Pedido 5" /></td>
       <td><img src="img/pedidos6.jpeg" className="animated-border" alt="Pedido 6" /></td>
     </tr>
@@ -89,9 +91,6 @@ function App() {
 
       <div id="inicio" className="content-section">
         <InicioContent />
-      </div>
-      <div id="menu" className="content-section">
-        <Menu />
       </div>
       <div id="nosotros" className="content-section">
         <h2>Nosotros</h2>
