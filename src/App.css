@@ -45,7 +45,7 @@
 }
 
 .custom-navbar {
-  background-color: #218522;
+  background-color: #228723;
   z-index: 10;
   position: fixed;
   width: 100%;
@@ -159,7 +159,7 @@
 
 .header .custom-cell {
   font-weight: bold;
-  background-color: #158304c0;
+  background-color: #228723;
 }
 
 @keyframes borderAnimation {
