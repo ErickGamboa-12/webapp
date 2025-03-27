@@ -43,14 +43,14 @@ function InicioContent() {
       <td><img src="img/pedido3.jpg" className="animated-border" alt="Pedido 3" /></td>
     </tr>
     <tr>
-      <td><img src="img/pedido4.jpg" className="animated-border" alt="Pedido 4" /></td>
+      <td><img src="img/pedido4.png" className="animated-border" alt="Pedido 4" /></td>
       <td><img src="img/pedido5.jpg" className="animated-border" alt="Pedido 5" /></td>
-      <td><img src="img/pedido6.jpeg" className="animated-border" alt="Pedido 6" /></td>
+      <td><img src="img/pedido6.jpg" className="animated-border" alt="Pedido 6" /></td>
     </tr>
     <tr>
-      <td><img src="img/pedido4.jpg" className="animated-border" alt="Pedido 4" /></td>
-      <td><img src="img/pedido5.jpg" className="animated-border" alt="Pedido 5" /></td>
-      <td><img src="img/pedido6.jpeg" className="animated-border" alt="Pedido 6" /></td>
+      <td><img src="img/pedido7.jpg" className="animated-border" alt="Pedido 4" /></td>
+      <td><img src="img/pedido8.jpg" className="animated-border" alt="Pedido 5" /></td>
+      <td><img src="img/pedido9.jpg" className="animated-border" alt="Pedido 6" /></td>
     </tr>
   </tbody>
 </table>
