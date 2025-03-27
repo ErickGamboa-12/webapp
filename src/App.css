@@ -1,6 +1,7 @@
-/* Estilos generales */
+
 #root {
-  max-width: 1280px;
+  height: 0; 
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -232,4 +233,32 @@
 .image-container {
   position: relative;
   display: inline-block;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-section {
+  flex: 1;
+}
+
+.contact-banner {
+  width: 1200px;
+  background: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  bottom: 0;
+}
+
+.contact-content {
+  height: 190px;
+  max-width: 800px;
+  margin: auto;
+  padding: 0px;
 }
