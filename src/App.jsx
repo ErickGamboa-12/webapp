@@ -1,13 +1,45 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container, Carousel } from 'react-bootstrap';
+import { Heart } from "lucide-react"; // Ícono de corazón
 import './App.css';
 
 
 
 function InicioContent() {
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [favorites, setFavorites] = useState({}); // Estado para favoritos
+
+
+  const images = [
+    { src: "img/pedido1.jpg", alt: "Pedido 1", description: "Hamburgesa EL CHABO con todo preparado" },
+    { src: "img/pedido2.jpg", alt: "Pedido 2", description: "Descripción del pedido 2" },
+    { src: "img/pedido3.jpg", alt: "Pedido 3", description: "Descripción del pedido 3" },
+    { src: "img/pedido4.png", alt: "Pedido 4", description: "Descripción del pedido 4" },
+    { src: "img/pedido5.jpg", alt: "Pedido 5", description: "Descripción del pedido 5" },
+    { src: "img/pedido6.jpg", alt: "Pedido 6", description: "Descripción del pedido 6" },
+    { src: "img/pedido7.jpg", alt: "Pedido 7", description: "Descripción del pedido 7" },
+    { src: "img/pedido8.jpg", alt: "Pedido 8", description: "Descripción del pedido 8" },
+    { src: "img/pedido9.jpg", alt: "Pedido 9", description: "Descripción del pedido 9" }
+  ];
+
+  const toggleFavorite = (imageAlt) => {
+    setFavorites((prevFavorites) => {
+      const updatedFavorites = { ...prevFavorites };
+      // Si ya es favorito, lo desmarcamos, si no, lo marcamos como favorito
+      updatedFavorites[imageAlt] = !updatedFavorites[imageAlt];
+      return updatedFavorites;
+    });
+  };
+
+
+
+
   return (
     <>
+
+    
       <div className="custom-banner">
         <div className="moving-text">
           <h4>¡Bienvenido a Los Jochos DEL OCHO! Los mejores jochos de la vecindad</h4>
@@ -31,33 +63,52 @@ function InicioContent() {
             <h3><b>MENÚ</b></h3>
           </div>
         </div>
-        
+
         <div className="custom-row row">
           <div className="custom-cell col-md-4">
-            
-          <table className="image-table">
-  <tbody>
-    <tr>
-      <td><img src="img/pedido1.jpg" className="animated-border" alt="Pedido 1" /></td>
-      <td><img src="img/pedido2.jpg" className="animated-border" alt="Pedido 2" /></td>
-      <td><img src="img/pedido3.jpg" className="animated-border" alt="Pedido 3" /></td>
-    </tr>
-    <tr>
-      <td><img src="img/pedido4.png" className="animated-border" alt="Pedido 4" /></td>
-      <td><img src="img/pedido5.jpg" className="animated-border" alt="Pedido 5" /></td>
-      <td><img src="img/pedido6.jpg" className="animated-border" alt="Pedido 6" /></td>
-    </tr>
-    <tr>
-      <td><img src="img/pedido7.jpg" className="animated-border" alt="Pedido 4" /></td>
-      <td><img src="img/pedido8.jpg" className="animated-border" alt="Pedido 5" /></td>
-      <td><img src="img/pedido9.jpg" className="animated-border" alt="Pedido 6" /></td>
-    </tr>
-  </tbody>
-</table>
-
+            <table className="image-table">
+              <tbody>
+                {Array.from({ length: 3 }, (_, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {images.slice(rowIndex * 3, rowIndex * 3 + 3).map((image, index) => (
+                      <td key={index}>
+                        <img
+                          src={image.src}
+                          className="animated-border"
+                          alt={image.alt}
+                          onClick={() => setSelectedImage(image)}
+                        />
+                        
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
+
+
+
+      {selectedImage && (
+  <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <img src={selectedImage.src} alt={selectedImage.alt} className="modal-image" />
+      <p>{selectedImage.description}</p>
+
+      {/* Aquí es donde se coloca el ícono de corazón junto con la descripción */}
+      <button className="heart-button" onClick={() => toggleFavorite(selectedImage.alt)}>
+        <Heart
+          size={24}
+          color={favorites[selectedImage.alt] ? "red" : "white"} // Cambia el color del ícono según el estado
+          fill={favorites[selectedImage.alt] ? "red" : "none"} // Rellena cuando es favorito
+        />
+      </button>
+    </div>
+  </div>
+)}
+
     </>
   );
 }
