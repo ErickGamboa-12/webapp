@@ -84,7 +84,7 @@
   background: linear-gradient(to right, #ffac48, #d38002);
   color: #fff;
   height: 10%;
-  width: 100vw; /* Ajustado para ser responsivo */
+  width: 99.5vw; /* Ajustado para ser responsivo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +123,7 @@
 
 .custom-carousel {
   height: 77vh;
-  width: 100vw; /* Ajustado para ser responsivo */
+  width: 99.5vw; /* Ajustado para ser responsivo */
   overflow: hidden;
   position: relative;
   margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
@@ -141,7 +141,7 @@
   margin-top: 20px;
   position: relative;
   height: 200vh;
-  width: 100vw; /* Ajustado para ser responsivo */
+  width: 99.5vw; /* Ajustado para ser responsivo */
   overflow: hidden;
   margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
 }
@@ -315,14 +315,42 @@ html, body {
 }
 
 .modal-content {
-  background: rgb(42, 123, 24);
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   max-width: 400px;
-  box-shadow: 2px 11px 15px rgba(20, 210, 23, 0.2);
+  box-shadow: 2px 11px 15px rgba(255, 140, 0, 0.2); /* Sombra con un tono naranja */
   position: relative;
-} 
+  
+  /* Animación de cambio de color */
+  animation: changeColor 5s infinite alternate; /* Duración de 5s, cambia de color infinitamente */
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: rgb(240, 136, 10); /* Naranja 1 */
+  }
+  25% {
+    background-color: rgb(255, 87, 34); /* Naranja 2 */
+  }
+  50% {
+    background-color: rgb(255, 165, 0); /* Naranja 3 */
+  }
+  75% {
+    background-color: rgb(255, 99, 71); /* Naranja 4 */
+  }
+  100% {
+    background-color: rgb(255, 69, 0); /* Naranja 5 */
+  }
+}
+
+
+.modal-content p {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  position: relative  ;
+}
 
 .modal-image {
   width: 100%;
@@ -357,4 +385,89 @@ html, body {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+/* Estilos generales */
+.nosotros-container {
+  background-color: #d1ad31; /* Amarillo claro, evocando la temática del Chavo del 8 */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.div .content-section {
+  width: 100%; /* Para ocupar todo el ancho de la página */
+  margin-left: auto; /* Empuja el contenido hacia la derecha */
+  margin-right: 0;
+  text-align: right; /* Alinea el texto hacia la derecha */
+} 
+
+.nosotros-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d32f2f; /* Rojo vibrante */
+  margin-bottom: 20px;
+}
+.content-section2{
+  display: block;
+  margin-top: 20px;
+  position: relative;
+  height: 200vh;
+  width: 99.5vw; /* Ajustado para ser responsivo */
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
+}
+
+.nosotros-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.nosotros-highlight {
+  font-weight: bold;
+  color: #2e7d32; /* Verde oscuro */
+}
+
+/* Estilo de la tarjeta de historia */
+.nosotros-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffc107; /* Borde amarillo */
+}
+
+.nosotros-subtitle {
+  font-size: 1.8rem;
+  color: #388e3c; /* Verde */
+  margin-bottom: 15px;
+}
+
+.nosotros-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Galería de imágenes */
+.nosotros-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.nosotros-image {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.nosotros-image:hover {
+  transform: scale(1.05);
 }

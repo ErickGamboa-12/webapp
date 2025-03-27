@@ -21,7 +21,7 @@ function InicioContent() {
     { src: "img/pedido6.jpg", alt: "Pedido 6", description: "Descripción del pedido 6" },
     { src: "img/pedido7.jpg", alt: "Pedido 7", description: "Descripción del pedido 7" },
     { src: "img/pedido8.jpg", alt: "Pedido 8", description: "Descripción del pedido 8" },
-    { src: "img/pedido9.jpg", alt: "Pedido 9", description: "Descripción del pedido 9" }
+    { src: "img/pedido9.jpg", alt: "Pedido 9", description: "Salchicha para asar, arrachera, jamón, quesillo, manchego, cheddar, tocino, tomate y cebolla. Incluye aderezo de mayonesa y catsup." }
   ];
 
   const toggleFavorite = (imageAlt) => {
@@ -32,9 +32,6 @@ function InicioContent() {
       return updatedFavorites;
     });
   };
-
-
-
 
   return (
     <>
@@ -148,22 +145,54 @@ function App() {
       <div id="inicio" className="content-section">
         <InicioContent />
       </div>
-      <div id="nosotros" className="content-section">
-        <h2>Nosotros</h2>
-        <p>Información sobre nosotros.</p>
+
+      <div id="nosotros" className="content-section2">
+      <section className="nosotros-container">
+            <div className="nosotros-content">
+              <h2 className="nosotros-title">Sobre Nosotros</h2>
+              <p className="nosotros-text">
+                <span className="nosotros-highlight">Los Jochos del Ocho</span> es una cenaduría originaria de
+                Tuxtla Gutiérrez, Chiapas. Inspirada en la icónica vecindad del Chavo del Ocho, ofrecemos
+                un ambiente nostálgico y familiar donde podrás disfrutar de nuestras especialidades: 
+                hamburguesas, jochos y snacks.
+              </p>
+              <div className="nosotros-card">
+                <h3 className="nosotros-subtitle">Nuestra Historia</h3>
+                <p className="nosotros-description">
+                  Nacimos con la idea de traer un pedacito de infancia a nuestros clientes, combinando el
+                  sabor con la diversión. Desde nuestros inicios, hemos sido un punto de encuentro para
+                  familias y amigos que buscan calidad, sabor y un toque de humor.
+                </p>
+              </div>
+            </div>
+            
+            <div className="nosotros-gallery">
+              <img src="/img/local.jpg" alt="Nuestro local" className="nosotros-image" />
+              <img src="/img/menu.jpg" alt="Nuestro menú" className="nosotros-image" />
+              <img src="/img/equipo.jpg" alt="Nuestro equipo" className="nosotros-image" />
+            </div>
+          </section>
       </div>
+
+
+
+
+
+      
+
       <div id="sucursales" className="content-section">
         <h2>Sucursales</h2>
         <p>Ubicación de nuestras sucursales.</p>
       </div>
+      
       <footer id="contacto" className="contact-banner">
       <div className="contact-content">
-        <h2 className="title">📞 Contacto</h2>
+        <h2 className="title">📞 Contactanos</h2>
         <p className="description">¡Ponte en contacto con nosotros para más información!</p>
         <ul className="info">
           <li className="info-item">
             <img src="../img/Logo_casa.png" width="24px" alt="Dirección" />
-            <span>9na Norte entre 3a y 4a Oriente, Tuxtla Gutiérrez, 29000</span>
+            <span> 9na Norte entre 3a y 4a Oriente, Tuxtla Gutiérrez, 29000</span>
           </li>
           <li className="info-item">
             📞 <a href="tel:+529613314349">961 331 4349</a>
