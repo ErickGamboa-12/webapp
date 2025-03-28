@@ -140,7 +140,7 @@
   display: block;
   margin-top: 20px;
   position: relative;
-  height: 200vh;
+  height: 185vh;
   width: 99.5vw; /* Ajustado para ser responsivo */
   overflow: hidden;
   margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
@@ -236,7 +236,7 @@
 
 
 .image-table {
-  width: 80%;  /* Cambia el porcentaje para que la tabla ocupe más espacio, puedes poner un valor mayor si es necesario */
+  width: 100%;  /* Cambia el porcentaje para que la tabla ocupe más espacio, puedes poner un valor mayor si es necesario */
   margin: auto;
   border-collapse: collapse;
   height: 50rem;
@@ -270,7 +270,7 @@
 }
 
 html, body {
-  height: 100%;
+  height: 85vh;
   margin: 0;
   padding: 0;
   display: flex;
@@ -282,7 +282,11 @@ html, body {
 }
 
 .contact-banner {
-  width: 1200px;
+  position: relative;
+  height: auto;
+  width: 99.5vw; /* Ajustado para ser responsivo */
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
   background: #333;
   color: white;
   padding: 20px 0;
@@ -411,7 +415,21 @@ html, body {
   display: block;
   margin-top: 20px;
   position: relative;
-  height: 200vh;
+  height: 90vh;
+  width: 99.5vw; /* Ajustado para ser responsivo */
+  overflow: hidden;
+  margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
+}
+
+.content-section3 h2{
+  color: white;
+}
+
+.content-section3{
+  display: block;
+  margin-top: 20px;
+  position: relative;
+  height: 90vh;
   width: 99.5vw; /* Ajustado para ser responsivo */
   overflow: hidden;
   margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
@@ -470,4 +488,55 @@ html, body {
 
 .nosotros-image:hover {
   transform: scale(1.05);
+}
+
+/* src/styles.css */
+.map-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px; /* Espacio alrededor de los iframes */
+  border-radius: 20px; /* Bordes redondeados de la caja */
+}
+
+.map-column {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+@keyframes shadow-color-change {
+  0% {
+    box-shadow: 0 4px 15px rgb(0, 255, 0); /* Sombra verde */
+  }
+  25% {
+    box-shadow: 0 4px 15px rgb(34, 139, 34); /* Sombra verde más oscura */
+  }
+  50% {
+    box-shadow: 0 4px 15px rgb(144, 238, 144); /* Sombra verde claro */
+  }
+  75% {
+    box-shadow: 0 4px 15px rgb(0, 128, 0); /* Sombra verde media */
+  }
+  100% {
+    box-shadow: 0 4px 15px rgb(0, 255, 0); /* Regresar a la sombra verde inicial */
+  }
+}
+
+.map-column iframe {
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden;
+  width: 100%;
+  height: 300px; /* Ajusta la altura del iframe */
+  animation: shadow-color-change 5s infinite; /* Animación para cambiar el color de la sombra */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .map-column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container, Carousel } from 'react-bootstrap';
-import { Heart } from "lucide-react"; // Ícono de corazón
+import { Heart } from "lucide-react"; 
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import './App.css';
 
 
@@ -9,8 +10,7 @@ import './App.css';
 function InicioContent() {
 
   const [selectedImage, setSelectedImage] = useState(null);
-  const [favorites, setFavorites] = useState({}); // Estado para favoritos
-
+  const [favorites, setFavorites] = useState({}); 
 
   const images = [
     { src: "img/pedido1.jpg", alt: "Pedido 1", description: "Especialidad de la casa. Doble carne, salsa bbq, doble jamón, doble tocino, doble salchicha, doble queso amarillo, cheddar, arrachera, manchego, piña, chorizo, quesillo, champiñones, tomate y cebolla. Incluye aderezo de mayonesa y catsup." },
@@ -27,7 +27,6 @@ function InicioContent() {
   const toggleFavorite = (imageAlt) => {
     setFavorites((prevFavorites) => {
       const updatedFavorites = { ...prevFavorites };
-      // Si ya es favorito, lo desmarcamos, si no, lo marcamos como favorito
       updatedFavorites[imageAlt] = !updatedFavorites[imageAlt];
       return updatedFavorites;
     });
@@ -94,12 +93,11 @@ function InicioContent() {
       <img src={selectedImage.src} alt={selectedImage.alt} className="modal-image" />
       <p>{selectedImage.description}</p>
 
-      {/* Aquí es donde se coloca el ícono de corazón junto con la descripción */}
       <button className="heart-button" onClick={() => toggleFavorite(selectedImage.alt)}>
         <Heart
           size={24}
-          color={favorites[selectedImage.alt] ? "red" : "white"} // Cambia el color del ícono según el estado
-          fill={favorites[selectedImage.alt] ? "red" : "none"} // Rellena cuando es favorito
+          color={favorites[selectedImage.alt] ? "red" : "white"}
+          fill={favorites[selectedImage.alt] ? "red" : "none"}
         />
       </button>
     </div>
@@ -174,16 +172,51 @@ function App() {
           </section>
       </div>
 
+      <div id="sucursales" className="content-section3">
+      <h2>Sucursales</h2>
+      <p>Ubicación de nuestras sucursales.</p>
 
+      <div className="map-container">
+        {/* Sucursal 1 */}
+        <div className="map-column">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.378977761238!2d-93.16577282508027!3d16.75628198402726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd96ca7cace49%3A0xf4d71df7d4fba219!2sLos%20Jochos%20Del%20Ocho%20%5BTer%C3%A1n%5D!5e1!3m2!1ses-419!2smx!4v1743186711838!5m2!1ses-419!2smx"
+            width="400"
+            height="300"
+            style={{ border: "0" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
 
+        {/* Sucursal 2 */}
+        <div className="map-column">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.748223877581!2d-93.09062092508069!3d16.736921284043575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed274719d64509%3A0x5192a97b2bdc4e63!2sLos%20Jochos%20Del%20Ocho%20Libramiento%20Sur!5e1!3m2!1ses-419!2smx!4v1743186783663!5m2!1ses-419!2smx"
+            width="400"
+            height="300"
+            style={{ border: "0" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
 
-
-      
-
-      <div id="sucursales" className="content-section">
-        <h2>Sucursales</h2>
-        <p>Ubicación de nuestras sucursales.</p>
+        {/* Sucursal 3 */}
+        <div className="map-column">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.2821343432192!2d-93.11440562508014!3d16.761356184022944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd8919a18fd67%3A0xdedf2b18a9663a5b!2sLos%20Jochos%20Del%20Ocho!5e1!3m2!1ses-419!2smx!4v1743186812295!5m2!1ses-419!2smx"
+            width="400"
+            height="300"
+            style={{ border: "0" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
+    </div>
       
       <footer id="contacto" className="contact-banner">
       <div className="contact-content">
