@@ -13,14 +13,14 @@ function InicioContent() {
 
 
   const images = [
-    { src: "img/pedido1.jpg", alt: "Pedido 1", description: "Hamburgesa EL CHABO con todo preparado" },
-    { src: "img/pedido2.jpg", alt: "Pedido 2", description: "Descripción del pedido 2" },
-    { src: "img/pedido3.jpg", alt: "Pedido 3", description: "Descripción del pedido 3" },
-    { src: "img/pedido4.png", alt: "Pedido 4", description: "Descripción del pedido 4" },
-    { src: "img/pedido5.jpg", alt: "Pedido 5", description: "Descripción del pedido 5" },
-    { src: "img/pedido6.jpg", alt: "Pedido 6", description: "Descripción del pedido 6" },
-    { src: "img/pedido7.jpg", alt: "Pedido 7", description: "Descripción del pedido 7" },
-    { src: "img/pedido8.jpg", alt: "Pedido 8", description: "Descripción del pedido 8" },
+    { src: "img/pedido1.jpg", alt: "Pedido 1", description: "Especialidad de la casa. Doble carne, salsa bbq, doble jamón, doble tocino, doble salchicha, doble queso amarillo, cheddar, arrachera, manchego, piña, chorizo, quesillo, champiñones, tomate y cebolla. Incluye aderezo de mayonesa y catsup." },
+    { src: "img/pedido2.jpg", alt: "Pedido 2", description: "Papas, jamón, tocino, salsa verde, queso derretible, sal, pimienta, cebolla, cilantro, crema ácida, mayonesa, chile en polvo, salsa picante, aguacate." },
+    { src: "img/pedido3.jpg", alt: "Pedido 3", description: "Pollo, harina, huevo, pan rallado, salsa búfalo, mantequilla, ajo en polvo, pimienta, sal." },
+    { src: "img/pedido4.png", alt: "Pedido 4", description: "Pan, salchicha, queso amarillo, tocino, chiles, mayonesa, mostaza, kétchup, cebolla, jalapeños." },
+    { src: "img/pedido5.jpg", alt: "Pedido 5", description: "Alitas de pollo, salsa búfalo, mantequilla, ajo en polvo, sal, pimienta, paprika, miel, mostaza, vinagre, cebolla en polvo, orégano, perejil." },
+    { src: "img/pedido6.jpg", alt: "Pedido 6", description: "hot dog, salchicha, queso amarillo, tocino, chiles, cebolla, mayonesa, mostaza, kétchup, aderezo ranch, aderezo de ajo, 2 aguas frescas a su gusto." },
+    { src: "img/pedido7.jpg", alt: "Pedido 7", description: "Papas, sal, pimienta, ajo en polvo, paprika, orégano, aceite, cebolla en polvo, chile en polvo." },
+    { src: "img/pedido8.jpg", alt: "Pedido 8", description: "Pan ,carne molida, queso cheddar, lechuga, tomate, cebolla, tocino, mayonesa, mostaza, kétchup, pepinillos, sal, pimienta, refrescos." },
     { src: "img/pedido9.jpg", alt: "Pedido 9", description: "Salchicha para asar, arrachera, jamón, quesillo, manchego, cheddar, tocino, tomate y cebolla. Incluye aderezo de mayonesa y catsup." }
   ];
 
