@@ -596,3 +596,29 @@ html, body {
   border: none;
   outline: none;
 }
+.contacto{
+  padding: 20px;
+  text-align: justify;
+}
+
+.separacion{
+  padding-right: 15px;
+}
+
+.separacion2{
+  padding-right: 15px;
+}
+
+.separacion2 img {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.separacion2 img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+
+.separacion2 img:hover {
+  opacity: 0.7; /* Hace la imagen un poco más transparente */
+}
