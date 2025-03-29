@@ -4,8 +4,56 @@ import { Navbar, Nav, Container, Carousel } from 'react-bootstrap';
 import { Heart } from "lucide-react"; 
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import './App.css';
+import {useEffect, useRef } from 'react';
+
+// Detectar cuando el usuario hace scroll hacia abajo o hacia arriba
+window.addEventListener('scroll', function() {
+  const widget = document.querySelector('.floating-widget');
+  
+  // Si el usuario ha hecho scroll hacia abajo (más de 100px), mostrar el widget con animación
+  if (window.scrollY > 100) {
+      widget.style.opacity = '1';  // Muestra el widget
+      widget.style.transform = 'translateY(0)';  // Aplica la animación de caída
+  } else {
+      widget.style.opacity = '0';  // Oculta el widget cuando el usuario está en la parte superior
+      widget.style.transform = 'translateY(-120vh)';  // Hace que el widget desaparezca hacia arriba
+  }
+});
 
 
+
+function ScrollButton() {
+  const [isBottom, setIsBottom] = useState(false);
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      setIsBottom(isAtBottom);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScrollClick = () => {
+    if (isBottom) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <button onClick={handleScrollClick} className="scroll-button">
+      <img 
+        src={isBottom ? "img/scroll2.png" : "img/scroll.png"} 
+        alt="Scroll Button" 
+        className="scroll-image"
+      />
+    </button>
+  );
+}
 
 function InicioContent() {
 
@@ -34,8 +82,6 @@ function InicioContent() {
 
   return (
     <>
-
-    
       <div className="custom-banner">
         <div className="moving-text">
           <h4>¡Bienvenido a Los Jochos DEL OCHO! Los mejores jochos de la vecindad</h4>
@@ -334,6 +380,10 @@ function App() {
         </ul>
       </div>
     </footer>
+    <div class="floating-widget">
+    <ScrollButton />
+    </div>
+
     </>
   );
 }

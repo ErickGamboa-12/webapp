@@ -552,3 +552,47 @@ html, body {
   text-align: justify;
   padding: 10px;  
 }
+
+.floating-widget {
+  position: fixed;
+  bottom: 20px;  /* Posición final en la parte inferior */
+  right: 20px;   /* Posición final en la parte derecha */
+  width: 100px;  /* Ajusta el tamaño */
+  height: 100px;
+  background-color: #007bff00; /* Color de fondo */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(-100vh); /* Empieza fuera de la pantalla */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Suaviza la animación */
+}
+
+/* Animación para el efecto de caída */
+@keyframes dropWidget {
+  0% {
+      opacity: 0;
+      transform: translateY(-100vh);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.scroll-image{
+  width: 11vh;
+  border: none;
+  outline: none;
+}
+.scroll-button{
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  border: none;
+  outline: none;
+}
