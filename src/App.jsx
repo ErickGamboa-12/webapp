@@ -20,8 +20,6 @@ window.addEventListener('scroll', function () {
   }
 });
 
-
-
 function ScrollButton() {
   const [isBottom, setIsBottom] = useState(false);
   const scrollRef = useRef(null);
@@ -195,25 +193,14 @@ function App() {
           <div className="nosotros-content">
             <h2 className="nosotros-title">Sobre Nosotros</h2>
             <p className="nosotros-text">
-              <span className="nosotros-highlight">Los Jochos del Ocho</span> es una cenaduría originaria de
-              Tuxtla Gutiérrez, Chiapas. Inspirada en la icónica vecindad del Chavo del Ocho, ofrecemos
-              un ambiente nostálgico y familiar donde podrás disfrutar de nuestras especialidades:
-              hamburguesas, jochos y snacks.
+              <span className="nosotros-highlight">Los Jochos del Ocho</span> es una cenaduría originaria de Tuxtla Gutiérrez, Chiapas, que nace con la inspiración de la icónica vecindad del Chavo del Ocho. Desde el primer día, nos hemos dedicado a crear un espacio único, con un ambiente nostálgico y familiar, donde cada visita te transporta a momentos entrañables de la televisión y la tradición. <br /><br />Nuestro objetivo es ofrecer no solo deliciosos platillos, sino también experiencias que te hagan sentir como en casa. En Los Jochos del Ocho, podrás disfrutar de nuestras especialidades, que incluyen jugosas hamburguesas, sabrosos jochos y una variedad de snacks que conquistan todos los paladares.
             </p>
             <div className="nosotros-card">
               <h3 className="nosotros-subtitle">Nuestra Historia</h3>
               <p className="nosotros-description">
-                Nacimos con la idea de traer un pedacito de infancia a nuestros clientes, combinando el
-                sabor con la diversión. Desde nuestros inicios, hemos sido un punto de encuentro para
-                familias y amigos que buscan calidad, sabor y un toque de humor.
+              Nacimos con la idea de traer un pedacito de infancia a nuestros clientes, combinando el sabor con la diversión. Desde nuestros inicios, hemos sido un punto de encuentro para familias y amigos que buscan calidad, sabor y un toque de humor. Nos encanta crear momentos inolvidables, ofreciendo productos que no solo despiertan sonrisas, sino que también evocan recuerdos especiales de tiempos felices. <br /><br />Cada bocado que servimos está pensado para que todos, desde los más pequeños hasta los más grandes, disfruten de una experiencia única llena de alegría y sabor. ¡Porque en cada detalle, nos importa hacerte sentir como en casa! Nuestra misión es seguir innovando y ofreciendo lo mejor, con un enfoque en la calidad, el cariño y la diversión que nos ha acompañado desde el principio. Queremos ser parte de tus celebraciones, de tus días especiales, y también de esos momentos cotidianos en los que solo se busca un buen sabor y una sonrisa.
               </p>
             </div>
-          </div>
-
-          <div className="nosotros-gallery">
-            <img src="/img/local.jpg" alt="Nuestro local" className="nosotros-image" />
-            <img src="/img/menu.jpg" alt="Nuestro menú" className="nosotros-image" />
-            <img src="/img/equipo.jpg" alt="Nuestro equipo" className="nosotros-image" />
           </div>
         </section>
       </div>
@@ -222,7 +209,7 @@ function App() {
         <br />
         <h2><b>SUCURSALES</b></h2>
         <br />
-        <p>Ubicación de nuestras sucursales.</p>
+        <p className='negro'>Ubicación de nuestras sucursales.</p>
 
         <div className="map-container">
           {/* Sucursal 1 */}
@@ -397,7 +384,7 @@ function App() {
               </table>
             </td>
             <td>
-              <h5>SIGUENOS EN REDES</h5>
+              <h5>SÍGUENOS EN REDES</h5>
               <br />
               <table>
                 <tr>

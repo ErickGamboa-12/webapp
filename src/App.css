@@ -156,11 +156,15 @@
   flex: 1;
   padding: 10px;
   text-align: center;
+  color: white;
 }
-
+.negro{
+  color: black;
+  text-align: center;
+}
 .header .custom-cell {
   font-weight: bold;
-  background-color: #228723;
+  background-color: #313f2c; /* Fondo blanco */
 }
 
 @keyframes borderAnimation {
@@ -394,7 +398,6 @@ html, body {
 
 /* Estilos generales */
 .nosotros-container {
-  background-color: #d1ad31; /* Amarillo claro, evocando la temática del Chavo del 8 */
   padding: 50px 20px;
   text-align: center;
 }
@@ -436,37 +439,65 @@ html, body {
   margin-left: calc(-50vw + 50%); /* Ajustado para centrar */
 }
 
-.nosotros-text {
-  font-size: 1.2rem;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 30px;
+/* Contenedor principal con borde sombreado */
+.nosotros-container {
+  background-color: #313f2cc7; /* Fondo blanco */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 12px;
+  height: 190vh;  
+  width: 99.5vw; /* Ajustado para ser responsivo */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  margin: 30px auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-.nosotros-highlight {
-  font-weight: bold;
-  color: #2e7d32; /* Verde oscuro */
+.nosotros-container:hover {
+  transform: scale(1.02); /* Efecto de crecimiento al pasar el mouse */
 }
 
-/* Estilo de la tarjeta de historia */
-.nosotros-card {
-  background-color: #ffffff;
-  border-radius: 15px;
+/* Contenido de nosotros */
+.nosotros-content {
+  background-color: #313f2c; /* Fondo blanco */
   padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 2px solid #ffc107; /* Borde amarillo */
 }
 
-.nosotros-subtitle {
-  font-size: 1.8rem;
-  color: #388e3c; /* Verde */
-  margin-bottom: 15px;
+/* Título principal */
+.nosotros-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 5px #a0d490, 0 0 10px #a0d490, 0 0 15px #a0d490;
+  padding: 10px;
 }
 
-.nosotros-description {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
+/* Texto destacado */
+.nosotros-highlight, p {
+  font-weight: bold;
+  text-align: justify;
+  color: #ffffff; /* Amarillo dorado */
+}
+.nosotros-description{
+  color: black;
+}
+
+/* Tarjeta de historia */
+.nosotros-card {
+  background-color: #839192 ; /* Color crema claro */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-left: 6px solid #d090108a ; /* Rojo anaranjado vibrante */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 /* Galería de imágenes */
@@ -482,13 +513,14 @@ html, body {
   width: 250px;
   height: 180px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nosotros-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 /* src/styles.css */
