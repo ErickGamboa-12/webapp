@@ -173,12 +173,33 @@ function App() {
       </div>
 
       <div id="sucursales" className="content-section3">
-      <h2>Sucursales</h2>
+        <br />
+      <h2>SUCURSALES</h2>
+      <br />
       <p>Ubicación de nuestras sucursales.</p>
 
       <div className="map-container">
         {/* Sucursal 1 */}
         <div className="map-column">
+        <img src="/img/geolocalizacion.png" alt="imagen" width={80} className='sucursal-container'/>
+        <br />
+        <center><h6><b>QUINTA AVENIDA NTE</b></h6></center>
+        <hr />
+        <table>
+          <tr>
+            <td>
+              <center>
+              <img src="/img/reloj.png" alt="relojocho" width={40} />
+              </center>
+            </td>
+            <td>
+              <center>
+                <h6>Horario: 5p.m. – 11:45 p.m.</h6>
+              </center>
+            </td>
+          </tr>
+        </table>
+        <hr />
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.378977761238!2d-93.16577282508027!3d16.75628198402726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd96ca7cace49%3A0xf4d71df7d4fba219!2sLos%20Jochos%20Del%20Ocho%20%5BTer%C3%A1n%5D!5e1!3m2!1ses-419!2smx!4v1743186711838!5m2!1ses-419!2smx"
             width="400"
@@ -192,6 +213,24 @@ function App() {
 
         {/* Sucursal 2 */}
         <div className="map-column">
+        <img src="/img/geolocalizacion.png" alt="imagen" width={80} className='sucursal-container'/>
+          <center><h6><b>LIBRAMIENTO SUR OTE</b></h6></center>
+          <hr />
+          <table>
+          <tr>
+            <td>
+              <center>
+              <img src="/img/reloj.png" alt="relojocho" width={40} />
+              </center>
+            </td>
+            <td>
+              <center>
+                <h6>Horario: 5p.m. – 11:45 p.m.</h6>
+              </center>
+            </td>
+          </tr>
+        </table>
+        <hr />
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.748223877581!2d-93.09062092508069!3d16.736921284043575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed274719d64509%3A0x5192a97b2bdc4e63!2sLos%20Jochos%20Del%20Ocho%20Libramiento%20Sur!5e1!3m2!1ses-419!2smx!4v1743186783663!5m2!1ses-419!2smx"
             width="400"
@@ -205,6 +244,24 @@ function App() {
 
         {/* Sucursal 3 */}
         <div className="map-column">
+        <img src="/img/geolocalizacion.png" alt="imagen" width={80} className='sucursal-container' />
+        <center><h6><b>AV. NOVENA NTE</b></h6></center>
+        <hr />
+        <table>
+          <tr>
+            <td>
+              <center>
+              <img src="/img/reloj.png" alt="relojocho" width={40} />
+              </center>
+            </td>
+            <td>
+              <center>
+                <h6>Horario: 5p.m. – 11:45 p.m.</h6>
+              </center>
+            </td>
+          </tr>
+        </table>
+        <hr />
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.2821343432192!2d-93.11440562508014!3d16.761356184022944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd8919a18fd67%3A0xdedf2b18a9663a5b!2sLos%20Jochos%20Del%20Ocho!5e1!3m2!1ses-419!2smx!4v1743186812295!5m2!1ses-419!2smx"
             width="400"
@@ -215,7 +272,9 @@ function App() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+
       </div>
+
     </div>
       
       <footer id="contacto" className="contact-banner">
