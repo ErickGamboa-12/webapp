@@ -174,7 +174,7 @@ function App() {
 
       <div id="sucursales" className="content-section3">
         <br />
-      <h2>SUCURSALES</h2>
+      <h2><b>SUCURSALES</b></h2>
       <br />
       <p>Ubicación de nuestras sucursales.</p>
 
@@ -185,7 +185,7 @@ function App() {
         <br />
         <center><h6><b>QUINTA AVENIDA NTE</b></h6></center>
         <hr />
-        <table>
+        <table className='table-sucursal'>
           <tr>
             <td>
               <center>
@@ -195,6 +195,18 @@ function App() {
             <td>
               <center>
                 <h6>Horario: 5p.m. – 11:45 p.m.</h6>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>
+                <img src="/img/telefono.png" alt="telejocho" width={40} />
+              </center>
+            </td>
+            <td>
+              <center>
+                <h6>Teléfono: 961 301 25479</h6>
               </center>
             </td>
           </tr>
@@ -216,7 +228,7 @@ function App() {
         <img src="/img/geolocalizacion.png" alt="imagen" width={80} className='sucursal-container'/>
           <center><h6><b>LIBRAMIENTO SUR OTE</b></h6></center>
           <hr />
-          <table>
+          <table className='table-sucursal'>
           <tr>
             <td>
               <center>
@@ -226,6 +238,18 @@ function App() {
             <td>
               <center>
                 <h6>Horario: 5p.m. – 11:45 p.m.</h6>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>
+                <img src="/img/telefono.png" alt="telejocho" width={40} />
+              </center>
+            </td>
+            <td>
+              <center>
+                <h6>Teléfono: 961 654 5432</h6>
               </center>
             </td>
           </tr>
@@ -247,7 +271,7 @@ function App() {
         <img src="/img/geolocalizacion.png" alt="imagen" width={80} className='sucursal-container' />
         <center><h6><b>AV. NOVENA NTE</b></h6></center>
         <hr />
-        <table>
+        <table className='table-sucursal'>
           <tr>
             <td>
               <center>
@@ -257,6 +281,18 @@ function App() {
             <td>
               <center>
                 <h6>Horario: 5p.m. – 11:45 p.m.</h6>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <center>
+                <img src="/img/telefono.png" alt="telejocho" width={40} />
+              </center>
+            </td>
+            <td>
+              <center>
+                <h6>Teléfono: 961 331 4349</h6>
               </center>
             </td>
           </tr>
